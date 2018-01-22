@@ -1,0 +1,20 @@
+MATH 170A Lecture 2
+
+Probabilistic Model
+	Sample Space Ω
+		The set of all possible outcomes of an experiment
+		A sample point w means w ∈ Ω
+	Event
+		A subset of Ω
+		F is the collection of all events
+	Probability
+		ℙ : F -> ℝ
+		A function that assigns a number to each event in F
+
+Example: Coin Toss
+	Ω = {H, T}
+	F = {ø, {H}, {T}, {H,T}}
+	ℙ = {0, 0.5, 0.5, 0}
+
+Probability Axioms
+	nonegativity
