@@ -1,0 +1,37 @@
+MATH 115A Lecture 2
+
+Purpose of Matrix
+	If A is an m x n matrix
+	A =
+		a11	a12	...	a1n
+		a21
+		.
+		.
+		.
+		am1 am2 ... amn
+
+	if x ∈ ℝn, then Ax ∈ ℝm
+
+	The main purpose of a matrix is to define a linear function that goes from ℝn -> ℝm, x -> Ax
+
+Unit Vector
+	e1 = <1, 0, 0, ...>
+	e2 = <0, 1, 0, ...>
+	e3 = <0, 0, 1, ...>
+
+	Aei = ith column of A
+
+Matrix Vector Multiplication
+	Think of an m x n matrix as n adjacent m-dimensional vectors
+	(v1 | v2 | v3 | ... | vn)
+
+	The matrix vector multiplication Ax produces
+	λ1v1 + λ2v2 + λ3v3 + ... + λnvn
+	where λi are the constants of the vector x.
+	Ax produces a linear combination of its columns.
+
+Matrix Matrix Multiplication
+	If A is m x n, and B is n x p, then AB produces an m x p matrix.
+
+	B = (w1 | w2 | w3 | ... | wp)
+	AB = (Aw1 | Aw2 | Aw3 | ... | Awp)

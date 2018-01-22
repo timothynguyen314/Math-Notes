@@ -1,0 +1,13 @@
+MATH 115A Discussion 2
+
+f:X -> Y
+
+f is injective iff (one-to-one)
+	whenever f(x1) = f(x2), x1 = x2
+	so no two xi can produce the same y
+
+f ix surjective iff (onto)
+	for all y, we can find an f(x) = y
+
+f is bijective iff
+	f is injective and surjective

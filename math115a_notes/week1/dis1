@@ -1,0 +1,43 @@
+MATH 115A Discussion 1
+
+DEFINITIONS
+	X ∪ Y = {z : z ∈ X or z ∈ Y}
+	X ∩ Y = {z : z ∈ X and z ∈ Y}
+	X \ Y = {z : z ∈ X and z ∉ Y}
+
+DeMorgan's Laws
+	THEOREM:
+		X \ (A ∩ B) = (X \ A) ∪ (X \ B)
+	PROOF:
+		By definition of equality, we must show
+		X \ (A ∩ B) ⊆ (X \ A) ∪ (X \ B)
+		AND
+		(X \ A) ∪ (X \ B) ⊆ X \ (A ∩ B)
+
+			X \ (A ∩ B) ⊆ (X \ A) ∪ (X \ B)
+			By definition of subset, we must show for every
+			z ∈ X \ (A ∩ B), z ∈ (X \ A) ∪ (X \ B)
+
+			By definition of \, z ∈ X means z ∉ (A ∩ B)
+			By definition of ∩, z ∈ X means we can't have z ∈ A and z ∈ B
+			z ∉ A means z ∈ X \ A
+			z ∉ B means z ∈ X \ B
+			Union of above cases is
+			z ∈ (X \ A) ∪ (X \ B)
+
+		(X \ A) ∪ (X \ B) ⊆ X \ (A ∩ B)
+		By definition of subset, we must show for every
+		z ∈ (X \ A) ∪ (X \ B), z ∈ X \ (A ∩ B)
+
+		By definition of ∪, z ∈ (X \ A) ∪ (X \ B) means z ∈ (X \ A)
+		By definition of \, z ∈ (X \ A) means z ∉ A
+		It is impossible for z ∈ (A ∩ B), because such would mean z ∈ A
+		z ∈ X \ (A ∩ B)
+
+Cartesian Product
+	If X and Y are sets,
+	X x Y = {(x,y) : x ∈ X, y ∈ Y}
+
+Function
+	f : X -> Y
+	x -> f(x)

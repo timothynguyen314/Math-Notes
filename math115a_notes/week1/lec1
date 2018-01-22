@@ -1,0 +1,29 @@
+MATH 115A Lecture 1
+
+Sets {}
+	x ∈ X
+	x is contained in the set X
+
+Types of Numbers
+	ℕ := {1, 2, 3, 4, ...}			Natural
+	ℤ := {0, -1, 1, -2, 2, ...}		Integer
+	ℚ := {m/n : m ∈ ℤ, n ∈ ℕ}		Rational
+	ℝ := 							Real
+	ℂ := {x + iy : x, y ∈ ℝ}		Complex
+
+	ø := {}							Empty Set
+
+DEFINITION of "subset":
+	Suppose X and Y are sets.
+	X is a subset of Y, or X ⊆ Y, IFF
+	for every z ∈ X, z ∈ Y
+
+DEFINITION of "equal":
+	Suppose X and Y are sets.
+	X = Y, IFF
+	X ⊆ Y AND Y ⊆ X
+
+	Examples:
+	{1, 0} = {0, 1}
+	{2} = {2, 2}
+	ø ≠ {ø}
