@@ -1,0 +1,72 @@
+Conditional Probability
+	The probability of A, given B, is
+	P(A|B) = P(A ∩ B)/P(B)
+	
+	If Aᵢ are disjoint,
+	P(∪Aᵢ|B)
+		= P((∪Aᵢ)∩B)/P(B)
+		= ∑P(Aᵢ∩B)/P(B)
+		= ∑P(Aᵢ|B)
+
+	P(A∩B) 		= P(A) P(B|A)
+	P(A∩B∩C)	= P(A) P(B|A) P(C|A∩B)
+	P(∩Aᵢ)		= P(Aᵢ)P(A₂|A₁)P(A₃|A₁∩A₂)...
+
+	Example:
+		We have 5 red marbles and 5 blue marbles.
+		We choose 3 marbles.
+		Probability that all are red?
+
+		P(Red∩Red∩Red)
+		= P(Red)P(Red|First Was Red)P(Red|First and Second Were Red)
+		= 5/10 * 4/9 * 3/8
+
+Total Probability
+	Let A₁,...,An be a partition of Ω.
+	P(B)
+		= ∑P(B∩Aᵢ)
+		= ∑P(Aᵢ)P(B|Aᵢ)
+
+	Example
+		We have 9 coins that are fair.
+		We have 1 coin with a 3/5 chance of heads.
+		We pick 1 coin at random and toss.
+		Probability of heads?
+
+		P(Heads)
+		= P(Heads∩Fair) + P(Heads∩Unfair)
+		= P(Fair)P(Heads|Fair) + P(Unfair)P(Heads|Unfair)
+		= 9/10 * 1/2 + 1/10 * 3/5
+
+Baye's Rule
+	Let A₁,...,An be a partition of Ω.
+	P(Aᵢ|B)
+		= P(Aᵢ∩B)/P(B)
+		= P(Aᵢ)P(B|Aᵢ) / ∑ P(Aⱼ)P(B|Aⱼ)
+
+Independence
+	A and B are independent if
+	P(A∩B) = P(A)P(B)
+	from
+	P(A|B) = P(A)
+
+	If A and B are independent,
+		Aᶜ and Bᶜ are independent
+		A and Bᶜ are independent
+		Aᶜ and B are independent
+
+	If Aᵢ are all independent
+	P(∩Aᵢ) = ∏P(Aᵢ)
+
+Conditional Independence
+	A and B are conditionally independent, given another event C, if
+	P(A∩B|C) = P(A|C)P(B|C)
+
+	Equivalent to saying
+	P(A|B∩C) = P(A|C)
+	Proof
+		P(A∩B|C)
+			= P(A∩B∩C)/P(C)
+			= P(C)P(B|C)P(A|B∩C)/P(C)
+			= P(B|C)P(A|B∩C)
+		P(A|B∩C) can be substituted with P(A|C)

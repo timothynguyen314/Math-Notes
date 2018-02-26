@@ -1,0 +1,58 @@
+Probabilistic Model
+	(Ω, F, P)
+	Ω - Sample Space
+		The set of all possible outcomes of an experiment.
+		A single coin toss - Ω = {H, T}
+		Two coin tosses - Ω = {HH, HT, TH, TT}
+	F - A collection of all events
+		An event is a subset of Ω.
+		A single coin toss - F = {∅, {H}, {T}, {H,T}}
+		A double coin tosses - more complicated
+	P - Probability
+		P: F-> R, assigns a real value probability to every event in F
+		A single coin toss - P = {0, 0.5, 0.5, 1}
+
+Probability Axioms
+	Nonnegativity
+		0 ≤ P(A) ≤ 1
+		For all A ∈ F
+	Normalization
+		P(Ω) = 1
+		P(∅) = 0
+	Additivity
+		Let A₁, A₂,... be a sequence of pairwise disjoint events
+		P(∪ Aᵢ) = ∑ P(A₁)
+
+Set Theory
+	A set is a collection of objects.
+
+	x ∈ S if x belongs to S
+	S ⊂ T if for all x ∈ S, x ∈ T
+	S = T if S ⊆ T and T ⊆ S
+
+	S ∪ T = {x ∈ S or x ∈ T}
+	S ∩ T = {x ∈ S and x ∈ T}
+	Sᶜ = {x ∈ Ω | x ∉ S}
+
+	Disjoint Sets
+		Sᵢ ∩ Sⱼ = ∅ for all i,j
+	Partition
+		A₁,A₂,... such that A₁,A₂,... are disjoint and
+		A₁∪A₂∪... = S
+
+	DeMorgan's Laws
+		(∪ Sᵢ)ᶜ = ∩ Sᵢᶜ
+		(∩ Sᵢ)ᶜ = ∪ Sᵢᶜ
+
+	Commutative, Associative, Distributive Laws
+		A ∩ B = B ∩ A
+		(A ∩ B) ∩ C = A ∩ (B ∩ C)
+		A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)
+
+	Absorption Laws
+		A ∪ (A ∩ B) = A
+		A ∩ (A ∪ B) = A
+
+	DeMorgan's Laws
+		(∪ Sᵢ)ᶜ = ∩ Sᵢᶜ
+		(∩ Sᵢ)ᶜ = ∪ Sᵢᶜ

@@ -1,0 +1,36 @@
+Counting Principle
+	Consider a process with k stages
+	Suppose there are nᵢ possible results the ith stage.
+	Then the total # of possible results is
+	n1n2...nk
+
+Permutation
+	Suppose there are n objects.
+	We want to pick k objects and arrange them in a sequence.
+	How many such sequences?
+	There are k stages, with n results at the first, n-1 results at the second, ...
+
+	n!/(n-k)!
+
+Combination
+	Suppose there are n objects.
+	We want to pick k objects and order doesn't matter.
+	How many possible choices?
+
+	# of choices * k! = n!/(n-k)!
+
+	n!/((n-k)!k!)
+
+Partition
+	Suppose we have an n element set.
+	Suppose we have non-negative integers k1, k2, ..., kr such that
+	k1+k2+...+kr = n
+	Suppose we partition our set into r subsets, with the ith subset having ki elements.
+	How many such partitions exist?
+
+	First stage:	(n k1)
+	Second stage:	(n-k1 k2)
+	...
+	rth stage:		(n-k1-...kr-1 kr) = (kr kr)
+
+	n!/(k1!k2!...kr!)	
