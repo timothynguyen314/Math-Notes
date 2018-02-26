@@ -1,0 +1,63 @@
+Discrete Uniform Random Variable
+	Takes values from a to b with equal probability
+
+	pₓ(k) 	= 1/(b-a+1) for k=a,...,b
+	E[X] 	= (a+b)/2
+	var(X) 	= ((b-a+1)²-1)/12
+
+	Remember that
+	∑ x² 	= n(n+1)(2n+1)/6
+
+Bernoulli Random Variable
+	X ~ Ber(p)
+	Takes values 1 or 0, with probability p or 1-p, respectively.
+
+	pₓ(k)	= p 	k=1
+			= 1-p	k=0
+	E[X] 	= p
+	var(X) 	= p(1-p)
+
+Binomial Random Variable
+	X ~ Bin(n,p)
+	Takes values 0,...,n.
+	Where X=k means k items succeeded, each with probability p, and there are (n k) such cases where X=k.
+
+	pₓ(k)	= (n k)pᵏ(1-p)ⁿ⁻ᵏ
+	E[X]	= np
+	var(X)	= np(1-p)
+
+	E[X] = E[X1] + ... + E[Xn] where Xi is a Bernoulli Random Variable
+
+Geometric Random Variable
+	X ~ Geom(p)
+	Takes value k if we get our success, with probability p, on the kth try.
+
+	pₓ(k)	= (1-p)ᵏ⁻¹p
+	E[X]	= 1/p
+	var(X)	= (1-p)/p²
+
+Poisson Random Variable
+	X ~ Poisson(λ)
+	An approximation of the Binomial Random Variable when n is very large, p is very small, and
+	λ = np
+	Basically counts rare events that are independent of each other.
+
+	pₓ(k)	= e^-λ λᵏ/k!
+
+	Remember that
+		∑ λᵏ/k! from k=0 to infinity
+		= e^λ
+		and that
+		lim n->∞ (1+λ/n)ⁿ
+		= e^λ
+	Proof:
+		(n k)pᵏ(1-p)ⁿ⁻ᵏ
+		= n!/(k!(n-k)!)(λ/n)ᵏ(1-λ/n)ⁿ⁻ᵏ
+		= λᵏ/k!(1-λ/n)ⁿ(1-λ/n)⁻ᵏ
+			when n is very large
+		= λᵏ/k!(1-λ/n)ⁿ
+			when n is very large
+		= e^-λ λᵏ/k!
+
+	E[X]	= λ
+	var(X)	= λ

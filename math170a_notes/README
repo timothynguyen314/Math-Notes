@@ -19,3 +19,19 @@ TABLE OF CONTENTS
 		Combination
 		Permutation
 		Partition
+	4-random_variables
+		Random Variable
+		Probability Mass Function
+		Expectation
+		Variance
+		Function of a Random Variable
+	5-types_of_rv
+		Bernoulli Random Variable
+		Binomial Random Variable
+		Geometric Random Variable
+		Poisson Random Variable
+	6-multi_rv
+		Joint Random Variable
+		Function of Multiple Random Variables
+		Conditioning Random Variables
+		Independent Random Variables

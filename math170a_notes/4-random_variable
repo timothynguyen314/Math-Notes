@@ -1,0 +1,57 @@
+Random Variable
+	A random variabe is defined as a real valued function
+	X : Ω->R
+
+	Example
+		We roll a dice.
+		We get $10 for a 6.
+		We get $1 for any other value.
+		Let X be the random variable for change in wealth.
+		X(1)=...=X(5) = 1
+		X(6)= 10
+
+Probability Mass Function
+	For a random variable X, we have the pmf
+	pₓ(k) = P(X = k)
+
+	∑ pₓ(k) = 1
+	P({w ∈ Ω | X(w) ∈ S}) = ∑ pₓ(k) for k ∈ S
+
+	Example
+		We roll a dice twice.
+		Find the pmf for the difference in roll values, D
+
+		pD(0) = 6/36
+		pD(1) = 10/36
+		pD(2) = 8/36
+		pD(3) = 6/36
+		pD(4) = 4/36
+		pD(5) = 2/36
+
+Expectation
+	E[X] = ∑ k pₓ(k)
+
+	E[Xⁿ] = ∑ kⁿ pₓ(k)
+
+Variance
+	var(X) = E[(X - E[X])²]
+	= ∑ (X - E[X])² pₓ(x)
+	= E[X²] - (E[X])²
+
+	Standard deviation is √var(X)
+
+Functions of Random Variables
+	Y = g(X)
+	p_y(y)
+		= P(Y=y)
+		= P(Y=g(X))
+		= ∑ pₓ(x) for all {x | g(x) = y}
+	E[Y]
+		= ∑ y p_y(y)
+		= ∑ y ∑ pₓ(x) for all {x | g(x) = y}
+		= ∑ g(x) pₓ(x)
+
+	Y = aX + b
+	E[Y] = aE[X] + b
+	var(Y) = a²var(X)
+	E[g(X)] = g(E[X]) only when linear

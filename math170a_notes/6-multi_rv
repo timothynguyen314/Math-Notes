@@ -1,0 +1,75 @@
+Joint Random Variable
+	Let there be two discrete random variables X and Y on the same experiment.
+	Joint pmf:
+		p_XY(x,y) = P(X=x, Y=y)
+	Marginal pmfs:
+		p_X(x) = ∑ p_XY (x,y) for all y
+		p_Y(y) = ∑ p_XY (x,y) for all x
+
+	Let there be three discrete random variables X, Y, and Z on the same experiment.
+	Joint pmf:
+		p_XYZ(x,y,z) = P(X=x, Y=y, Z=z)
+	Marginal pmfs:
+		p_X(x) = ∑ ∑ p_XYZ (x,y,z) for all y,z
+		p_Y(y) = ∑ ∑ p_XYZ (x,y,z) for all x,z
+		p_Z(z) = ∑ ∑ p_XYZ (x,y,z) for all x,y
+
+Function of Multiple Random Variables
+	Z 		= g(X,Y)
+	p_Z(z)	= ∑ p_XY(x,y) for all {(x,y)|g(x,y)=z}
+	E[Z]	= ∑ ∑ g(x,y) p_XY(x,y) for all x,y
+
+Conditioning Random Variables
+	If we want to find the probability that X=x given event A
+		p_X|A(x)
+			= P(X=x|A)
+			= P({X=x}∩A)/P(A)
+
+		Example:
+			We roll a dice.
+			Probability of value given event A=roll is even?
+			p_X|A(x) = 1/3 for 2,4,6 and 0 otherwise
+
+		E[X|A] = Σ x p_X|A(x)
+		E[g(X)|A] = Σ g(x) p_X|A(x)
+
+		Total Expectation Theorem
+			If A1, A2,...An is a partition of Ω, with P(Ai)>0 for alll i, then
+			E[X] = Σ P(Ai) E[X|Ai]
+			E[X|B] = Σ P(Ai|B) E[X|Ai∩B]
+
+	If we want to find the probability that X=x given Y=y
+		p_X|Y(x|y)
+			= P(X=x|Y=y)
+			= P(X=x,Y=y)/P(Y=y)
+			= p_XY(x,y)/p_Y(y)
+
+		for all x, ∑ p_X|Y(x|y) = 1
+		p_XY(x,y) = p_X|Y(x|y) p_Y(y)
+
+		E[X|Y=y] = Σ x p_X|Y (x|y)
+
+		Total Expectation Theorem
+			E[X] = Σ p_Y(y) E[X|Y=y]
+
+Independent Random Variables
+	Random Variable X is independent from event A if 
+		P(X=x,A) 	= P(X=x)P(A) for all x 
+		p_X(x) 		= p_X|A(x)
+
+	Random Variables X and Y are independent if
+		p_XY(x,y) 	= p_X(x)p_Y(y) for all x,y
+		p_X(x) 		= p_X|Y(x|y) for all y 
+
+		E[XY] 		= E[X]E[Y]
+		E[g(X)h(Y)] = E[g(X)]E[h(Y)]
+
+		var(X+Y) = var(X) + var(Y)
+
+	Random Variables X1,...,Xn are independent if
+		p_X1...Xn 		= p_X1(x1)...p_Xn(xn) for all x1,...,xn
+		E[X1...Xn] 		= E[X1]...E[Xn]
+		var(X1+...+Xn) 	= var(X1)+...+var(Xn)
+
+	Random Variables X and Y are conditionally independent if
+		P(X=x,Y=y|A) = P(X=x|A)P(Y=y|A)
