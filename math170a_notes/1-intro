@@ -52,7 +52,3 @@ Set Theory
 	Absorption Laws
 		A ∪ (A ∩ B) = A
 		A ∩ (A ∪ B) = A
-
-	DeMorgan's Laws
-		(∪ Sᵢ)ᶜ = ∩ Sᵢᶜ
-		(∩ Sᵢ)ᶜ = ∪ Sᵢᶜ

@@ -31,19 +31,6 @@ Exponential Random Variable
 	E[X] = 1/λ
 	var(X) = 1/λ²
 
-Cumulative Distribution Function
-	Fₓ(x) = P(X ≤ x) =
-	∑ pₓ(k) for all k≤x if X is discrete
-	∫-∞_x fₓ(t)dt 		if X is continuous
-
-	If x ≤ y, then Fₓ(x) ≤ Fₓ(y)
-
-	lim x->-∞ Fₓ(x) = 0
-	lim x->∞ Fₓ(x) = 1
-
-	pₓ(k) = Fₓ(k) - Fₓ(k-1)
-	fₓ(x) = dFₓ/dx (x)
-
 Normal Random Variable
 	X ~ N(μ, σ²)
 	X ~ N(0,1), standard normal distribution
@@ -56,3 +43,16 @@ Normal Random Variable
 	Φ(y) = P(Y≤y) = P(Y < y) = 1/√(2π) ∫-∞_y e^-(t²/2)dt
 	Φ(-y) = 1 - Φ(y)
 	Φ(y) is normally provided by a standard normal table
+
+Cumulative Distribution Function
+	Fₓ(x) = P(X ≤ x) =
+	∑ pₓ(k) for all k≤x if X is discrete
+	∫-∞_x fₓ(t)dt 		if X is continuous
+
+	If x ≤ y, then Fₓ(x) ≤ Fₓ(y)
+
+	lim x->-∞ Fₓ(x) = 0
+	lim x->∞ Fₓ(x) = 1
+
+	pₓ(k) = Fₓ(k) - Fₓ(k-1)
+	fₓ(x) = dFₓ/dx (x)
