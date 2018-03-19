@@ -1,4 +1,4 @@
-Joint Random Variable
+Joint Random Variables
 	Let there be two discrete random variables X and Y on the same experiment.
 	Joint pmf:
 		p_XY(x,y) = P(X=x, Y=y)
@@ -14,10 +14,10 @@ Joint Random Variable
 		p_Y(y) = ∑ ∑ p_XYZ (x,y,z) for all x,z
 		p_Z(z) = ∑ ∑ p_XYZ (x,y,z) for all x,y
 
-Function of Multiple Random Variables
-	Z 		= g(X,Y)
-	p_Z(z)	= ∑ p_XY(x,y) for all {(x,y)|g(x,y)=z}
-	E[Z]	= ∑ ∑ g(x,y) p_XY(x,y) for all x,y
+	Function of Multiple Random Variables
+		Z 		= g(X,Y)
+		p_Z(z)	= ∑ p_XY(x,y) for all {(x,y)|g(x,y)=z}
+		E[Z]	= ∑ ∑ g(x,y) p_XY(x,y) for all x,y
 
 Conditioning Random Variables
 	If we want to find the probability that X=x given event A

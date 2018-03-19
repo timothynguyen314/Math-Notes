@@ -1,0 +1,53 @@
+Joint Random Variable
+	P(a≤X≤b, c≤Y≤d) = ∫c_d ∫a_b f_XY(x,y) dxdy
+
+	∫-∞_∞ ∫-∞_∞ f_XY(x,y) dxdy = 1
+	f_X(x) = ∫-∞_∞ f_XY(x,y)dy
+	f_Y(y) = ∫-∞_∞ f_XY(x,y)dx
+
+	P(x≤X≤x+δ, y≤Y≤y+δ) = f_XY(x,y) * δ²
+
+	E[g(X,Y)] = ∫∫ g(x,y) f_XY(x,y) dxdy
+	E[aX + bY + c] = aE[X] + bE[Y] + c
+
+Conditioning Random Variables
+	f_X|Y(x|y) = f_XY(x,y)/f_Y(y)
+	P(X ∈ A | Y=y) = ∫_A f_X|Y (x|y) dx
+
+	∫-∞_∞ f_X|Y(x|y) dx = 1
+
+	E[X|E] = ∫-∞_∞ f_X|E (x) dx
+	E[X|Y=y] = ∫-∞_∞ f_X|Y (x|y) dx
+
+	E(g(X)|E) = ∫-∞_∞ g(x) f_X|E (x) dx
+	E(g(X)|Y=y) = ∫-∞_∞ g(x) f_X|Y (x|y) dx
+
+	E(X) = ∫-∞_∞ E(X|Y=y) f_Y(y)dy
+
+	E(g(X,Y)|Y=y) = ∫-∞_∞ g(x,y) f_X|Y(x|y) dx
+
+Independent Random Variables
+	f_XY(x,y) = f_X(x) f_Y(y) ∀ x,y
+	P(X ∈ [x,x+dx] and Y ∈ [y,y+dy]) = P(X ∈ [x,x+dx])P(Y ∈ [y,y+dy])
+
+	f_X|Y(x|y) = f_X(x) for all (x,y) st f_Y(y) > 0
+
+	E[XY] = E[X]E[Y]
+	var(X+Y) = var(X) + var(Y)
+
+	Baye's Rule
+		X and Y are continuous random variables
+			fXY(x,y) = fX(x) fY|X(y|x)
+			fXY(x,y) = fY(y) fX|Y(x|y)
+
+			fX|Y(x|y)
+				= f_XY(x,y)/f_Y(y)
+				= fX(x)fY|X(y|x)/∫fX(t)fY|X(y|t)dt
+
+		X is discrete and Y is continuous
+			P(X=xi|Y=y)
+				= P(X=xi)fY|X(y|xi)/∑P(X=xi)fY|X(y|xi)
+
+		X is continuous and Y is discrete
+			fX|Y(x|yi)
+				= f_X(x)P(Y=yi|X=x)/∫fX(t)P(Y=yi|X=t)dt

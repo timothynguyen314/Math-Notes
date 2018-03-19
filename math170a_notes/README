@@ -31,7 +31,17 @@ TABLE OF CONTENTS
 		Geometric Random Variable
 		Poisson Random Variable
 	6-multi_rv
-		Joint Random Variable
-		Function of Multiple Random Variables
+		Joint Random Variables
+		Conditioning Random Variables
+		Independent Random Variables
+	7-continuous_rv
+		Continuous Random Variable
+		Expectation and Variance
+		Uniform Distribution Random Variable
+		Exponential Random Variable
+		Normal Random Variable
+		Cumulative Distributive Function
+	8-multi_continuous_rv
+		Joint Random Variables
 		Conditioning Random Variables
 		Independent Random Variables

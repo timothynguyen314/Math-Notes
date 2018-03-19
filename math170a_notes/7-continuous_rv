@@ -1,0 +1,58 @@
+Continuous Random Variable
+	Let X be a random variable and fₓ(x) be a "probability density function"
+	P(a≤X≤b) = ∫a_b fₓ(x)dx
+
+	∫a_a fₓ(x)dx = 0
+	∫-∞_∞ fₓ(x)dx = 1
+	∫x_x+δ fₓ(t)dt = fₓ(x) δ
+
+Expectation and Variance
+	E[X] = ∫-∞_∞ xfₓ(x)dx
+	E[g(X)] = ∫-∞_∞ g(x) fₓ(x)dx
+
+	var(X) = E[(X-E[X])²] = ∫-∞_∞(x-E[X])²fₓ(x)dx
+	var(X) = E[X²] - (E[X])²
+
+	If Y = aX + b
+	E[Y] = aE[X] + b
+	var(Y) = a²var(X)
+
+Uniform Distribution Random Variable
+	X ~ Unif[a,b]
+	fₓ(x) = 1/(b-a)
+
+	E[X] = (b+a)/2
+	var(X) = (b-a)²/12
+
+Exponential Random Variable
+	X ~ Exp(λ)
+	fₓ(x) = λe^(-λx)
+
+	E[X] = 1/λ
+	var(X) = 1/λ²
+
+Cumulative Distribution Function
+	Fₓ(x) = P(X ≤ x) =
+	∑ pₓ(k) for all k≤x if X is discrete
+	∫-∞_x fₓ(t)dt 		if X is continuous
+
+	If x ≤ y, then Fₓ(x) ≤ Fₓ(y)
+
+	lim x->-∞ Fₓ(x) = 0
+	lim x->∞ Fₓ(x) = 1
+
+	pₓ(k) = Fₓ(k) - Fₓ(k-1)
+	fₓ(x) = dFₓ/dx (x)
+
+Normal Random Variable
+	X ~ N(μ, σ²)
+	X ~ N(0,1), standard normal distribution
+	fₓ(x) = 1/(√(2π)σ) e^-((x-μ)²/(2σ²))
+
+	Let Y = (X-μ)/σ
+	Then Y ~ N(0,1)
+	E[Y] = 0
+	var(Y) = 1
+	Φ(y) = P(Y≤y) = P(Y < y) = 1/√(2π) ∫-∞_y e^-(t²/2)dt
+	Φ(-y) = 1 - Φ(y)
+	Φ(y) is normally provided by a standard normal table
