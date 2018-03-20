@@ -16,10 +16,10 @@ Conditioning Random Variables
 
 	∫-∞_∞ f_X|Y(x|y) dx = 1
 
-	E[X|E] = ∫-∞_∞ f_X|E (x) dx
-	E[X|Y=y] = ∫-∞_∞ f_X|Y (x|y) dx
+	E[X|A] = ∫-∞_∞ x f_X|A (x) dx
+	E[X|Y=y] = ∫-∞_∞ x f_X|Y (x|y) dx
 
-	E(g(X)|E) = ∫-∞_∞ g(x) f_X|E (x) dx
+	E(g(X)|A) = ∫-∞_∞ g(x) f_X|A (x) dx
 	E(g(X)|Y=y) = ∫-∞_∞ g(x) f_X|Y (x|y) dx
 
 	E(X) = ∫-∞_∞ E(X|Y=y) f_Y(y)dy
@@ -46,7 +46,7 @@ Independent Random Variables
 
 		X is discrete and Y is continuous
 			P(X=xi|Y=y)
-				= P(X=xi)fY|X(y|xi)/∑P(X=xi)fY|X(y|xi)
+				= P(X=xi)fY|X(y|xi)/∑P(X=xj)fY|X(y|xj)
 
 		X is continuous and Y is discrete
 			fX|Y(x|yi)
