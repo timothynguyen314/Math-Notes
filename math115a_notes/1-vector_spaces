@@ -1,0 +1,64 @@
+Vector Spaces over a Field
+	Definition of a Field
+		Has a set F and operations:
+		+ : F x F -> F, (λ,μ) -> λ + μ
+		* : F x F -> F, (λ,μ) -> λ * μ
+	Definition of a Vector Space over a field F
+		Has a set V and operations:
+		+ : V x V -> V, (v,w) -> v + w
+		* : F x V -> V, (λ,v) -> λ * v
+
+		AXIOMS:
+		1) Commutativity - ∀u,v ∈ V
+			u+v = v+u
+		2) Associativity - ∀u,v,w ∈ V
+			u+(v+w) = (u+v)+w
+		3) Additive Identity Element - ∀v ∈ V
+			∃ 0 ∈ V st v+0 = v
+		4) Additive Inverse - ∀v ∈ V
+			∃ u ∈ V st u+v = 0
+		5) Multiplicative Identity Element - ∀ v ∈ V
+			∃ 1 ∈ V st 1v = v
+		6) Sensible Field + VS Scalar Multiplication - ∀λ,μ ∈ F, ∀v ∈ V
+			(λμ)v = λ(μv)
+		7) Sensible VS Addition + Scalar Multiplication - ∀λ ∈ F, ∀u,v ∈ V
+			λ(u+v) = λu + λv
+		8) Sensible Field Addition + VS Scalar Multiplication - ∀λ,μ ∈ F, ∀v ∈ V
+			(λ + μ)v = λv + μv
+	THEOREMS
+		1) If u+w = v+w, then u=v
+		2) 0 is a unique vector st ∀v ∈ V, u+v=v
+		3) The additive inverse -u st u+(-u)=0 is unique
+		4) λ0 = 0
+		5) 0v = 0
+		6) (-1)v = -v
+		7) -(λv) = (-λ)v = λ(-v)
+	Examples of Vector Spaces
+		Rⁿ, the set of n-tuples, is a vector space over the field R under coordinate-wise addition and scalar multiplication.
+		M_mxn, the set of mxn matrices, is a vector space over the field R under matrix addition and scalar multiplication.
+		{f:X->R}, the set of real functions, is a vector space over the field R under pointwise addition and scalar multiplication.
+		P_n(R), the set of n-degree polynomials, is a vector space over the field R under coefficient-wise addition and scalar multiplication.
+		P(R) = ∪ P_n(R), the set of all polynomials, is a vector space over the field R under coefficient-wise addition and scalar multiplication.
+Subspaces
+	Definition of a Subspace
+		Suppose V is a vector space over F.
+		W ⊆ V
+		+ : W x W -> W, (v,w) -> v + w
+		* : F x W -> W, (λ,w) -> λ * w
+	THEOREMS
+		1) 0 ∈ W
+		2) If w,w' ∈ W, then w+w' ∈ W
+		3) If λ ∈ F and w ∈ W, then λw ∈ W
+	Examples of Subspaces
+		A hyperplane, {a1x1 + ... + anxn = 0} for some a1,...,an ∈ R, is a subspace of Rⁿ
+		The set of symmetric matrices, {Aᵀ = A}, is a subspace of M_nxn
+		The set of skew-symmetric matrics, {Aᵀ = -A}, is a subspace of M_nxn
+		The set of traceless matrices, {tr(A) = 0}, is a subspace of M_nxn
+		The set of diagonal matrices, {non-diagonals are 0}, is a subspace of M_nxn
+		The set of even functions, {f:R->R, f(-t) = f(t)}, is a subspace of f:R->R
+		The set of odd functions, {f:R->R, f(-t) = -f(t)}, is a subspace of f:R->R
+		P_n(R) is a subspace of P_m(R) for n<m
+		P_n(R) is a subspace of P(R)
+	Theorem
+		Given subspaces Wᵢ
+		∩ Wᵢ = {w ∈ V : w ∈ Wᵢ}, is a subspace

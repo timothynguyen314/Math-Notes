@@ -1,0 +1,46 @@
+Linear Transformations
+	Definitions
+		Linear Transformation
+			T:V->W
+			∀v1,v2 ∈ V, T(v1+v2) = T(v1) + T(v2)
+			∀λ ∈ F, ∀v ∈ V, T(λv) = λT(v)
+		Composite LTs
+			T:U->V, S:V->W
+			ST:U->W
+			(ST)(u) = S(T(u))
+		Isomorphism
+			T:U->V is an isomorphism if it's a bijection, meaning it is invertible.
+			It is an isomorphism if there exists an S such that ST = 1ᵤ and TS = 1ᵥ.
+	Lemmas
+		1) T(0) = 0
+		2) T(λv1 + v2) = λT(v1) + T(v2)
+		3) ∑ T(λivi) = ∑ λiT(vi)
+	Theorems
+		1) ST is linear
+		2) If T:U->V is an isomorphism, its inverse S:V->U is linear.
+		3)
+			Suppose (v1,...,vn) is a basis for V and that (w1,...,wn) is a tuple in W
+			There is exactly one linear transformation such that
+			T(vj) = wj for all j ∈ {1,...,n}
+			If T1(vj) = T2(vj) for all j, T1=T2
+		4) (S+T)(v) = S(v) + T(v)
+Kernels and Images
+	Definitions
+		ker(T) = {v ∈ V : T(v) = 0}
+		im(T) = {w ∈ W : ∃ v ∈ V st T(v) = w}
+
+		rank(T) = dim(im(T))
+		null(T) = dim(ker(T))
+	Theorems
+		1) ker(T) is a subspace of V, im(T) is a subspace of W
+		2) T is injective IFF ker(T) = {0}
+		3) T is surjective IFF im(T) = W
+		4) If V = span({v1,...,vn}), im(T) = span({T(v1),...,T(vn)})
+		5) rank(T) + null(T) = dim(V)
+	Theorems - EQUIVALENT STATEMENTS when T:V->W is LINEAR over field F with dimension n
+		1) T is injective
+		2) ker(T) = {0}
+		3) null(T) = 0
+		4) T is surjective
+		5) im(T) = W
+		6) rank(T) = n

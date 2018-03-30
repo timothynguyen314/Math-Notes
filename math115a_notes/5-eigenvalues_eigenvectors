@@ -1,0 +1,30 @@
+Eigenvalues and Eigenvectors
+	Definition
+		v is an eigenvector of T IFF
+		v ≠ 0
+		Tv = λv for some eigenvalue λ ∈ F
+
+		ker(T - λ1v) is the eigenspace Eλ corresponding to λ
+
+		characteristic polynomial
+			cT(x) = det(T - x1v)
+		algebraic multiplicity
+			dim(Eλ) = null(T - λ1v)
+		geometric multiplicity
+			max{k ∈ N : (x-λ)ᵏ is a factor of cT(x)}
+	Theorems
+		1)
+			v is an eigenvector IFF v ∈ ker(T - λ1v) \ {0}
+			λ is an eigenvalue IFF ker(T - λ1v) ≠ {0}
+		2) Eigenvectors are linearly independent.
+		3) The linearly independent tuples of every eigenspace are all linearly independent.
+		4) λ is an eigenvalue IFF it is a root of cT(x)
+		5) cT(x) splits over F, meaning it can be written as cT(x) = c(x - σ1)(x - σ2)...(x - σn)
+		6) 1 ≤ geometric multiplicity ≤ algebraic multiplicity
+Diagonalizability
+	Definition
+		A linear transformation is diagonalizable if it has a basis made of eigenvectors.
+		If B = (v1,...,vn) is a basis of eigenvectors, [T]B_B is a diagonal matrix.
+	Theorems
+		1) If T:V->V has dim(V) distinct eigenvalues, T is diagonalizable
+		2) T is diagonalizable IFF algebraic multiplicity = geometric multiplicity

@@ -3,15 +3,28 @@ Math 115A - Linear Algebra
 These are the notes of Tim Nguyen for Math 115A: Linear Algebra, taught by Michael Andrews at UCLA in Winter 2018.
 
 TABLE OF CONTENTS
-	week1
-	\
-		dis1
-		hw1
-		lec1
-		lec2
-		lec3
-	week2
-	\
-		dis2
-		lec4
-		lec5
+\
+	1-vector_spaces
+		Vector Spaces Over Fields
+		Subspaces
+	2-linear_combinations
+		Linear Combinations
+		Span
+		Linear Dependence and Linear Independence
+		Bases and Dimension
+	3-linear_transformations
+		Linear Transformations
+		Kernels and Images
+	4-matrices
+		Matrices
+		[v]B
+		[T]Bv_Bw
+		Isomorphisms and Invertible Matrices
+		Determinants
+	5-eigenvalues_eigenvectors
+		Eigenvalues and Eigenvectors
+		Diagonalizability
+	6-inner_products
+		Inner Products
+		Gram-Schmidt
+		Orthogonal Complements

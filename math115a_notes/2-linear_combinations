@@ -1,0 +1,51 @@
+Linear Combination
+	Definition
+		v ∈ V is a linear combination IFF v1,...,v2 ∈ V and λ1,...,λn ∈ F st
+		v = λ1v1 + ... + λnvn	
+Span
+	Definition
+		span(S) := {v ∈ V : v is a linear combination of vectors in S}
+		span({v1,...,vn}) := {λ1v1+...+λnvn : λ1,...,λn ∈ F}
+	Theorems
+		1) If S ⊆ V, span(S) is a subspace of V
+		2) span(S) is the smallest subspace containing S
+Linear Dependence and Linear Independence
+	Definition
+		{v1,...,vn} are linearly dependent IFF there exists λ1,...,λn ∈ F st
+		λ1v1 + ... + λnvn = 0
+
+		If λ1=...=λn = 0, this is the trivial dependency relation.
+		{v1,...,vn} are linearly independent if the only dependency relation is the trivial one.
+	Theorems
+		1)
+			If {v1,...,vn} is LD, then {v1,...,vm} with m>n is LD
+			If {v1,...,vn} is LI, then {v1,...,vm} with m<n is LI
+		2) If {v1,...,vn} is LI, then {v1,...,vn+1} is LD IFF vn+1 ∈ span({v1,...,vn})
+Bases and Dimension
+	Definition of Basis
+		span({v1,...,vn}) = V
+		{v1,...,vn} is LI
+	Definition of Dimension
+		Finite Dimensional if V = span(finite set)
+		Infinite Dimensional otherwise
+
+		dim(V) = # of elements in basis
+	Theorems
+		1) {v1,...,vn} is a basis if ∀v ∈ V, there exists λ1,...,λn ∈ F st v = λ1v1+...+λnvn
+		2) If the tuple (v1,...,vn) spans V, then a subtuple is a basis
+		3)
+			If W is a subspace of V, dim(W) ≤ dim (V).
+			If dim(W) = dim(V), W = V.
+			
+			Any basis for W can be extended to become a basis for V.
+	Replacement Theorem
+		Suppose (v1,...,vm) is LI and that (w1,...,wn) spans V
+		Then m ≤ n
+		And we can choose n-m vectors from (w1,...,wn) that, together with (v1,...,vm), spans V
+
+		Thus if the tuples are both bases, m = n
+	Theorem when dim(V) = n
+		1) If {v1,...,vm} spans V, m ≥ n
+		2) If {v1,...,vn} spans V, it is a basis
+		3) If {v1,...,vm} is LI, m ≤ n and we can find m-n additional vectors to find a basis
+		4) If {v1,...,vn} is LI, it is a basis

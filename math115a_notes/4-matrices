@@ -1,0 +1,94 @@
+Matrices
+	What Does a Matrix Mean?
+		An mxn matrix has m rows and n columns.
+		An mxn matrix multiplied by an nxp matrix produces an mxp matrix.
+		We know that for AB = C, we have cij = ∑ aik bkj
+		But what does this actually mean?
+			An mxn matrix takes an Rⁿ vector, and maps it to Rᵐ.
+			The jth column of matrix A, is where the unit vector ej is mapped to.
+			It does this by taking a linear combination of the columns, using the multiplied vector for scalars.
+
+			In AB = C, each column of C is the product of A and the respective column of B.
+[v]B
+	Definition of ψₐ and [v]B
+		Let a = {v1,...,vn}
+		Ψₐ:Fⁿ->V
+		Ψₐ(ej) = vj
+		Ψₐ(<λ1,...,λn>) = λ1v1 + ... + λnvn
+
+		If B = {v1,...,vn} is a basis for V
+		ΨB(<λ1,...,λn>) = λ1v1 + ... + λnvn
+		[v]B = ΨB⁻¹
+		[λ1v1 + ... + λnvn]B = <λ1,...,λn>
+	Theorem
+		1) Ψₐ is injective IFF (v1,...,vn) is LI 
+		2) Ψₐ is surjective IFF (v1,...,vn) spans V
+		3) Ψₐ is an isomorphism IFF (v1,...,vn) is a basis
+		4)
+			If V is a vector space over field F with dim(V) = n, then there exists
+			Ψₐ:Fⁿ->V
+			when a = basis for V
+[T]Bv_Bw
+	Theorem
+		Suppose T:Rⁿ->Rᵐ. Then there is a unique matrix A ∈ M_mxn(R) st ∀ x ∈ Rⁿ,
+		T(x) = Ax
+	Definition
+		Suppose we have linear transformation T:V->W, basis Bv = (v1,...,vn), basis Bw = (w1,...,wm)
+		A = aij, i≤m, j≤n
+		T(vj) = ∑i=1_m aij wi
+		Such a matrix is denoted [T]Bv_Bw
+
+		[T]Bv_Bw [v]Bv = [T(v)]Bw
+		The change of basis matrix, multiplied by a basis, produces the basis of the linear transformation.
+	Change of Coordinate Matrix
+		Suppose B and B' are both bases for V
+		[1v]B'_B is the change of coordinate matrix
+	Theorems
+		1)
+			Suppose S:V->W, T:U->V
+			Suppose Bu = (u1,...,up), Bv = (v1,...,vn), Bw = (w1,...,wm)
+			Suppose A is the matrix of S with respect to Bv and Bw
+			Suppose B is the matrix of T with respect to Bu and Bv
+			AB is the matrix of ST with respect to Bu and Bw
+			[ST]Bu_Bw = [S]Bv_Bw[T]Bu_Bv
+		2)
+			A is the matrix of T with respect to Bv and Bw
+			A'is the matrix of T with respect to Bv'and Bw'
+			Then
+			A' = [1w]Bw'_Bw⁻¹ A [1v]Bv'_Bv
+		3)
+			[S+T]Bv_Bw = [S]Bv_Bw + [T]Bv_Bw
+			[λT]Bv_Bw = λ[T]Bv_Bw
+Isomorphisms and Invertible Matrices
+	Definition
+		A is invertible IFF ∃ B st AB = BA = In
+	Theorems
+		1) Suppose T:V->W.
+			If V is finite-dimensional and T is surjective, W is finite-dimensional
+			If W is finite-dimensional and T is injective, V is finite-dimensional
+		2) If T is injective, dim(V) ≤ dim(W)
+		3) If T is surjective, dim(W) ≤ dim(V)
+		4) If T is an isomorphism, dim(V) = dim(W)
+		5) If dim(V) = dim(W), there exists an isomorphism T:V->W
+		6) If (v1,...,vn) is a basis for V, T is an isomorphism IFF (T(v1),...,T(vn)) is a basis for W
+		7) A matrix defines an isomorphism IFF it is invertible.
+		8) T = 1v IFF [T]B_B = In
+		9) T is an isomorphism IFF [T]Bv_Bw is invertible.
+		10) AB = In IFF BA = In
+Determinants
+	Theorems
+		1)
+			det(aij) = aij
+			det(A) = ∑ (-1)ⁱ⁺ʲ aij det(~Aij)
+			where ~Aij is the matrix obtained by removing the column and row containing aij
+		2) det(In) = 1
+		3) det(v|...|u+λw|...|vn) = det(v|...|u|...|vn) + λdet(v|...|w|...|vn)
+		4) If two columns are the same, determinant is 0
+		5) If a column is 0, determinant is 0
+		6) Swapping two columns makes the determinant negative
+		7) Adding a scalar multiple of one column to another does not change the determinant
+		8) If A ∈ M_nxn(F), det(Aᵀ) = det(A)
+		9) If A,B ∈ M_nxn(F), det(AB) = det(A)det(B)
+		10) A is invertible IFF det(A) ≠ 0
+	Definition
+		det(T) = det([T]Bv_Bv)

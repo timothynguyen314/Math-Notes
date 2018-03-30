@@ -1,0 +1,57 @@
+Inner Products
+	Definition
+		<,> : V x V -> R
+			is an inner product if
+			<λu1 + u2, v> = λ<u1,v> + <u2, v>
+			<u,v> = <v,u>
+			<v,v> > 0 if v ≠ 0
+
+			The real inner product space is V over R w inner product <,>
+		<,> : V x V -> C
+			is an inner product if
+			<λu1 + u2, v> = λ<u1,v> + <u2, v>
+			<u,v> = conjugate <v,u>
+			<v,v> > 0 if v ≠ 0
+			The complex inner product space is V over C w inner product <,>
+	
+		The norm of v, ||v|| = √<v,v>
+		v is a unit vector if ||v|| = 1
+
+		u and v are orthogonal if <u,v> = 0
+		(v1,...,vn) are orthogonal if they are all orthogonal to each other
+		(v1,...,vn) are orthonormal if they are orthogonal and all unit vectors
+	Theorems
+		1) If V is an inner product space over R or C
+			<,> is (conjugate) linear in the second variable
+			<0,v> = <v,0> = 0
+			v = 0 IFF <v,v> = 0
+			If <u,v1> = <u,v2>, v1 = v2
+		2)
+			||v|| = 0 IFF v = 0, otherwise ||v|| > 0
+			||λv|| = |λ| ||v||
+			||u+v|| ≤ ||u|| + ||v|| (triangle inequality)
+			|<u,v>| ≤ ||u|| ||v|| (Cauchy-Schwartz)
+		3) Any orthonormal tuple can be extended to an orthonormal basis
+Gram-Schmidt
+	Theorem
+		Let V be an inner product space over R or C
+		Let (w1,...,wn) be orthogonal and v = ∑ λi wi
+		Then
+		λi = <v,wi> /||wi||²
+
+		Gram-Schmidt
+		Let V be an inner product space over R or C
+		Let (v1,...,vn) be linearly independent
+		Define (w1,...,wn)
+			w1 = v1
+			wk = vk - ∑i=1tok-1 <vk,wi>/||wi||² wi
+		Then
+			(w1,...,wn) is orthogonal
+			span(w1,...,wk) = span(v1,...,vk)
+Orthogonal Complements
+	Definition
+		The orthogonal complement of S is
+		{v ∈ V : ∀ s ∈ S, <v,s> = 0}
+	Theorem
+		If W is a subspace of V and Wᴾ is its orthogonal complement
+		V = W ⊕ Wᴾ
